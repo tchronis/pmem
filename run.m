@@ -20,66 +20,104 @@
 
 
 (* ::Input:: *)
-ClearAll[n,m,group,x,gameon];
-n=6;
-m={4,1,1};
-group=Table[0,{n},{Plus@@m}];
+ClearAll[n,m,group,x,gameon,time2pause,message,rest,x,all];
+n=4;
+m=5;
+group=Table[0,{n},{m}];
+gameon=False;
+time2pause=2;
+message="Welcome - please adjust parameters and press play!";
 
 
 (* ::Input:: *)
 ClearAll[reset];
-reset:=(group=Table[0,{n},{Plus@@m}];)
+reset:=(group=Table[0,{n},{m}];)
 
 
 (* ::Input:: *)
 ClearAll[check];
 check[p1_,p2_]:=Module[{},
 If[gameon,
-If[0<n-p1<=6 && 0<p2<=Plus@@m,
+If[0<n-p1<=6 && 0<p2<=m,
 If[
 MemberQ[rest,{n-p1,p2}],rest=Complement[rest,{{n-p1,p2}}]
 ,
-MessageDialog["Missed one! - end of game"];
+If[
+MemberQ[all,{n-p1,p2}],
+group[[n-p1,p2]]=5,(*Do not throw error on double click the same square*)
+message="Missed one! - end of game";(*MessageDialog["Missed one! - end of game"]*)
+group[[n-p1,p2]]=10;
 (group[[Sequence@@#]]=-1)&/@rest;gameon=False
-]];
-If[rest=={},MessageDialog["Success!"];gameon=False]
+]]];
+If[rest=={},gameon=False;message="Success!"(*MessageDialog["Success!"]*)]
 ]]
 
 
 (* ::Input:: *)
 ClearAll[randomchoose];
-randomchoose[k_]:=RandomSample[Flatten[Table[{i,j},{i,n},{j,Plus@@m}],1],k]
+randomchoose[k_]:=RandomSample[Flatten[Table[{i,j},{i,n},{j,m}],1],k]
 
 
 (* ::Input:: *)
 ClearAll[play];
 play[k_]:=
 Module[{r},
+message="The game begins. Try to memorize all dark squares";
+gameon=False;
+reset;
+r=randomchoose[k];rest=r;all=rest;
+(group[[Sequence@@#]]=-1/2)&/@r;
+Pause[time2pause];
 reset;
 gameon=True;
-r=randomchoose[k];rest=r;
-(group[[Sequence@@#]]=-1/2)&/@r;
-Pause[2];
-reset;
+message="I hope you remember them all!";
 ]
 
 
 (* ::Input:: *)
 ClearAll[panel];
-panel:=DynamicModule[{},
+panel=DynamicModule[{},x={};
 Dynamic@(
 pt=MousePosition["Graphics"];
 EventHandler[
-ArrayPlot[group,Mesh->All,MeshStyle->Black,ColorRules->{-1->Gray,-1/2->Red,0->White},ImageSize->50{Plus@@m,n}],
+ArrayPlot[group,Mesh->All,MeshStyle->Black,ColorRules->{10->Red,5->Green,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
 {"MouseClicked":>(
-Module[{p1,p2},p1=Floor[pt[[2]]];p2=Ceiling[ pt[[1]]];
-If[gameon,
+Module[{p1,p2},
+If[gameon ,
+p1=Floor[pt[[2]]];p2=Ceiling[ pt[[1]]];
 x={pt,n-p1,p2};
 check[p1,p2];
-If[
-(1<=n-p1<=n) && (1<=p2<=Plus@@m),
+If[(1<=n-p1<=n) && (1<=p2<=m),
 group[[n-p1,p2]]=(group[[n-p1,p2]]/.{-1/2->0,0->-1/2})
 ]]]
 )
 }]
-),SaveDefinitions->True]
+),SaveDefinitions->True];
+
+
+(* ::Input:: *)
+DynamicModule[{k=4},
+Framed@Column[{
+Row[{
+"Size of board ",
+" rows = ",
+InputField[Dynamic[n],Number,FieldSize->2],
+" columns = ",
+InputField[Dynamic[m],Number,FieldSize->2]
+}],
+Row[{
+"Number of squares to remember ",
+InputField[Dynamic[k],Number,FieldSize->2]
+}],
+Row[{
+"Seconds to display the correct squares ",
+InputField[Dynamic[time2pause],Number,FieldSize->2]
+}],
+Button["Play",play[k],ImageSize->300,Method->"Queued"],
+panel,
+"",
+Dynamic@message
+}]
+,SaveDefinitions->True]
+
+
