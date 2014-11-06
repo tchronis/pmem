@@ -27,6 +27,7 @@ group=Table[0,{n},{m}];
 gameon=False;
 time2pause=2;
 message="Welcome - please adjust parameters and press play!";
+rest=all={};
 
 
 (* ::Input:: *)
@@ -43,13 +44,12 @@ If[
 MemberQ[rest,{n-p1,p2}],rest=Complement[rest,{{n-p1,p2}}]
 ,
 If[
-MemberQ[all,{n-p1,p2}],
-group[[n-p1,p2]]=5,(*Do not throw error on double click the same square*)
-message="Missed one! - end of game";(*MessageDialog["Missed one! - end of game"]*)
+!MemberQ[all,{n-p1,p2}](*Do not throw error on double click the same square*),
+message="Missed one! - end of game";
 group[[n-p1,p2]]=10;
 (group[[Sequence@@#]]=-1)&/@rest;gameon=False
 ]]];
-If[rest=={},gameon=False;message="Success!"(*MessageDialog["Success!"]*)]
+If[rest=={},gameon=False;message="Success!"]
 ]]
 
 
@@ -80,7 +80,7 @@ panel=DynamicModule[{},x={};
 Dynamic@(
 pt=MousePosition["Graphics"];
 EventHandler[
-ArrayPlot[group,Mesh->All,MeshStyle->Black,ColorRules->{10->Red,5->Green,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
+ArrayPlot[group,Mesh->All,MeshStyle->Black,ColorRules->{10->Red,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
 {"MouseClicked":>(
 Module[{p1,p2},
 If[gameon ,
@@ -88,7 +88,7 @@ p1=Floor[pt[[2]]];p2=Ceiling[ pt[[1]]];
 x={pt,n-p1,p2};
 check[p1,p2];
 If[(1<=n-p1<=n) && (1<=p2<=m),
-group[[n-p1,p2]]=(group[[n-p1,p2]]/.{-1/2->0,0->-1/2})
+group[[n-p1,p2]]=(group[[n-p1,p2]]/.{(*-1/2\[Rule]0,*)0->-1/2})
 ]]]
 )
 }]
