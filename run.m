@@ -22,7 +22,7 @@
 (* ::Input:: *)
 ClearAll[n,m,group,x,gameon,time2pause,message,rest,x,all];
 n=4;
-m=5;
+m=7;
 group=Table[0,{n},{m}];
 gameon=False;
 time2pause=2;
@@ -39,7 +39,7 @@ reset:=(group=Table[0,{n},{m}];)
 ClearAll[check];
 check[p1_,p2_]:=Module[{},
 If[gameon,
-If[0<n-p1<=6 && 0<p2<=m,
+If[0<n-p1<=n && 0<p2<=m,
 If[
 MemberQ[rest,{n-p1,p2}],rest=Complement[rest,{{n-p1,p2}}]
 ,
@@ -61,6 +61,10 @@ randomchoose[k_]:=RandomSample[Flatten[Table[{i,j},{i,n},{j,m}],1],k]
 (* ::Input:: *)
 ClearAll[play];
 play[k_]:=
+If[!IntegerQ[k] || k>m*n || k<1,message="INAPROPRIATE NUMBER OF SQUARES TO REMEMBER\nPLEASE CORRECT",
+If[!IntegerQ[n] || !IntegerQ[m] || m<1 || m>12 || n<1 || n>12,
+n=4;m=7;
+message="INAPROPRIATE BOARD SIZE.\nROWS AND COLUMNS MUST BE\nPOSITIVE INTEGERS SMALLER THAN 20\nPLEASE CORRECT",
 Module[{r},
 message="The game begins. Try to memorize all dark squares";
 gameon=False;
@@ -71,7 +75,7 @@ Pause[time2pause];
 reset;
 gameon=True;
 message="I hope you remember them all!";
-]
+]]]
 
 
 (* ::Input:: *)
@@ -80,7 +84,7 @@ panel=DynamicModule[{},x={};
 Dynamic@(
 pt=MousePosition["Graphics"];
 EventHandler[
-ArrayPlot[group,Mesh->All,MeshStyle->Black,ColorRules->{10->Red,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
+ArrayPlot[group,Mesh->True(*All*),MeshStyle->Gray,Background->LightBrown,ColorRules->{10->Red,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
 {"MouseClicked":>(
 Module[{p1,p2},
 If[gameon ,
