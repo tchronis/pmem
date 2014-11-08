@@ -66,10 +66,10 @@ randomchoose[k_]:=RandomSample[Flatten[Table[{i,j},{i,n},{j,m}],1],k]
 (* ::Input:: *)
 ClearAll[play];
 play[k_]:=
-If[!IntegerQ[k] || k>m*n || k<1,message="INAPROPRIATE NUMBER OF SQUARES TO REMEMBER\nPLEASE CORRECT",
+If[!IntegerQ[k] || k>m*n || k<1,message="INAPROPRIATE NUMBER OF SQUARES \n TO REMEMBER! PLEASE CORRECT",
 If[!IntegerQ[n] || !IntegerQ[m] || m<1 || m>12 || n<1 || n>12,
 n=4;m=7;
-message="INAPROPRIATE BOARD SIZE.\nROWS AND COLUMNS MUST BE\nPOSITIVE INTEGERS SMALLER THAN 20\nPLEASE CORRECT",
+message="INAPPROPRIATE BOARD SIZE.\n ROWS AND COLUMNS MUST BE\n POSITIVE INTEGERS SMALLER THAN 20\n PLEASE CORRECT",
 Module[{r},
 message="The game begins. Try to memorize all dark squares";
 gameon=False;
@@ -108,30 +108,36 @@ check[p1,p2]]]
 (* ::Input:: *)
 ClearAll[fontfamily,style];
 fontfamily="Helvetica";
-style[t_]:=Text@Style[t,fontfamily]
+fontcolor=Darker@Yellow;
+style[t_]:=If[(Head@t)===InputField,t,Text@Style[t,fontfamily,fontcolor,Bold,Larger]]
 
 
 (* ::Input:: *)
-DynamicModule[{k=4},
-Framed@Column[{
-Row[style/@{
+DynamicModule[{k=5},
+Framed[
+Column[{"",
+Row[style/@{" ",
 "Size of board ",
-" rows = ",
+" rows  ",
 InputField[Dynamic[n],Number,FieldSize->2],
-" columns = ",
+" columns   ",
 InputField[Dynamic[m],Number,FieldSize->2]
 }],
-Row[style/@{
-"Number of squares to remember ",
+Row[style/@{" ",
+"Number of squares you have to find   ",
 InputField[Dynamic[k],Number,FieldSize->2]
 }],
-Row[style/@{
+Row[style/@{" ",
 "Seconds to display the correct squares ",
 InputField[Dynamic[time2pause],Number,FieldSize->2]
 }],
 Button[style/@"Play",play[k],ImageSize->300,Method->"Queued"],
 panel,
 "",
-Dynamic@style@message
-}]
+Dynamic@style@("  "<>message),
+""
+},Background->Darker@Brown]
+,FrameMargins->Medium,Background->Black]
 ,SaveDefinitions->True]
+
+
