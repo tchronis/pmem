@@ -20,9 +20,10 @@
 
 
 (* ::Input:: *)
+(*Global Variables*)
 ClearAll[n,m,group,x,gameon,time2pause,message,rest,x,all];
 n=4;
-m=7;
+m=6;
 group=Table[0,{n},{m}];
 gameon=False;
 time2pause=2;
