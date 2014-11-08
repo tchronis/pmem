@@ -15,4 +15,4 @@ The ultimate goal will be to have the option to create your own memory game usin
   
   -Several colors to remember
 
-![alt tag](https://github.com/tchronis/pmem/edit/master/screenshot.png)
+![alt tag](https://github.com/tchronis/pmem/blob/master/screenshot.png)
