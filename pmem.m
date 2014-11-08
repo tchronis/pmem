@@ -113,11 +113,7 @@ style[t_]:=If[(Head@t)===InputField,t,Text@Style[t,fontfamily,fontcolor,Bold,Lar
 
 
 (* ::Input:: *)
-<<<<<<< HEAD
 DynamicModule[{k=6},
-=======
-DynamicModule[{k=5},
->>>>>>> 0849bc62c6b004abde8de2a2e01edec437b5658c
 Framed[
 Column[{"",
 Row[style/@{" ",
@@ -143,5 +139,6 @@ Dynamic@style@("  "<>message),
 },Background->Darker@Brown]
 ,FrameMargins->Medium,Background->Black]
 ,SaveDefinitions->True]
+
 
 
