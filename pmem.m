@@ -50,7 +50,11 @@ message="Missed one! - end of game";
 group[[n-p1,p2]]=10;
 (group[[Sequence@@#]]=-1)&/@rest;gameon=False
 ]]];
-If[rest=={},gameon=False;message="Success!"]
+If[rest=={},
+group=group/.{1->2};
+gameon=False;
+message="Success!";
+]
 ]]
 
 
@@ -71,7 +75,7 @@ message="The game begins. Try to memorize all dark squares";
 gameon=False;
 reset;
 r=randomchoose[k];rest=r;all=rest;
-(group[[Sequence@@#]]=-1/2)&/@r;
+(group[[Sequence@@#]]=1)&/@r;
 Pause[time2pause];
 reset;
 gameon=True;
@@ -85,45 +89,49 @@ panel=DynamicModule[{},x={};
 Dynamic@(
 pt=MousePosition["Graphics"];
 EventHandler[
-ArrayPlot[group,Mesh->True(*All*),MeshStyle->Gray,Background->LightBrown,ColorRules->{10->Red,-1->LightGray,-1/2->Black,0->White},ImageSize->50{m,n}],
+ArrayPlot[group,Mesh->True(*All*),MeshStyle->Gray,Background->LightBrown,ColorRules->{10->Red,2->Darker[Green],-1->LightGray,1->Black,0->White},ImageSize->50{m,n}],
 {"MouseClicked":>(
 Module[{p1,p2},
 If[gameon ,
 p1=Floor[pt[[2]]];p2=Ceiling[ pt[[1]]];
 x={pt,n-p1,p2};
-check[p1,p2];
+
 If[(1<=n-p1<=n) && (1<=p2<=m),
-group[[n-p1,p2]]=(group[[n-p1,p2]]/.{(*-1/2\[Rule]0,*)0->-1/2})
-]]]
+group[[n-p1,p2]]=(group[[n-p1,p2]]/.{0->1})
+];
+check[p1,p2]]]
 )
 }]
 ),SaveDefinitions->True];
 
 
 (* ::Input:: *)
+ClearAll[fontfamily,style];
+fontfamily="Helvetica";
+style[t_]:=Text@Style[t,fontfamily]
+
+
+(* ::Input:: *)
 DynamicModule[{k=4},
 Framed@Column[{
-Row[{
+Row[style/@{
 "Size of board ",
 " rows = ",
 InputField[Dynamic[n],Number,FieldSize->2],
 " columns = ",
 InputField[Dynamic[m],Number,FieldSize->2]
 }],
-Row[{
+Row[style/@{
 "Number of squares to remember ",
 InputField[Dynamic[k],Number,FieldSize->2]
 }],
-Row[{
+Row[style/@{
 "Seconds to display the correct squares ",
 InputField[Dynamic[time2pause],Number,FieldSize->2]
 }],
-Button["Play",play[k],ImageSize->300,Method->"Queued"],
+Button[style/@"Play",play[k],ImageSize->300,Method->"Queued"],
 panel,
 "",
-Dynamic@message
+Dynamic@style@message
 }]
 ,SaveDefinitions->True]
-
-
-
