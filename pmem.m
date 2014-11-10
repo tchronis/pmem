@@ -27,7 +27,7 @@ m=6;
 group=Table[0,{n},{m}];
 gameon=False;
 time2pause=2;
-message="Welcome - please adjust parameters and press play!";
+message="Welcome!\n Please adjust parameters and press play!";
 rest=all={};
 
 
@@ -46,14 +46,14 @@ MemberQ[rest,{n-p1,p2}],rest=Complement[rest,{{n-p1,p2}}]
 ,
 If[
 !MemberQ[all,{n-p1,p2}](*Do not throw error on double click the same square*),
-message="Missed one! - end of game";
+message="Missed one! - end of game\n";
 group[[n-p1,p2]]=10;
 (group[[Sequence@@#]]=-1)&/@rest;gameon=False
 ]]];
 If[rest=={},
 group=group/.{1->2};
 gameon=False;
-message="Success!";
+message="Success!\n";
 ]
 ]]
 
@@ -67,11 +67,11 @@ randomchoose[k_]:=RandomSample[Flatten[Table[{i,j},{i,n},{j,m}],1],k]
 ClearAll[play];
 play[k_]:=
 If[!IntegerQ[k] || k>m*n || k<1,message="INAPROPRIATE NUMBER OF SQUARES \n TO REMEMBER! PLEASE CORRECT",
-If[!IntegerQ[n] || !IntegerQ[m] || m<1 || m>12 || n<1 || n>12,
+If[!IntegerQ[n] || !IntegerQ[m] || m<1 || m>15 || n<1 || n>10,
 n=4;m=7;
 message="INAPPROPRIATE BOARD SIZE.\n ROWS AND COLUMNS MUST BE\n POSITIVE INTEGERS SMALLER THAN 20\n PLEASE CORRECT",
 Module[{r},
-message="The game begins. Try to memorize all dark squares";
+message="The game begins.\n Try to memorize all dark squares";
 gameon=False;
 reset;
 r=randomchoose[k];rest=r;all=rest;
@@ -79,7 +79,7 @@ r=randomchoose[k];rest=r;all=rest;
 Pause[time2pause];
 reset;
 gameon=True;
-message="I hope you remember them all!";
+message="I hope you remember them all!\n";
 ]]]
 
 
@@ -135,7 +135,7 @@ Button[style/@"Play",
 (n=n1;m=m1;);play[k],ImageSize->300,Method->"Queued"],
 panel,
 "",
-Dynamic@style@("  "<>message),
+Dynamic@style@(" "<>message),
 ""
 },Background->Darker@Brown]
 ,FrameMargins->Medium,Background->Black]
