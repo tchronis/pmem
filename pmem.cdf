@@ -23,16 +23,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     13260,        339]
-NotebookOptionsPosition[     13588,        327]
-NotebookOutlinePosition[     14264,        354]
-CellTagsIndexPosition[     14221,        351]
+NotebookDataLength[     13597,        346]
+NotebookOptionsPosition[     13925,        334]
+NotebookOutlinePosition[     14601,        361]
+CellTagsIndexPosition[     14558,        358]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
- DynamicModuleBox[{$CellContext`k$$ = 6}, 
+ DynamicModuleBox[{$CellContext`k$$ = 6, $CellContext`n1$$ = 
+  6, $CellContext`m1$$ = 6}, 
   FrameBox[
    TagBox[GridBox[{
       {"\<\"\"\>"},
@@ -77,7 +78,8 @@ Cell[BoxData[
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`n], Number, FieldSize -> 2],InterpretationBox[
+          Dynamic[$CellContext`n1$$], Number, FieldSize -> 2],
+         InterpretationBox[
           Cell[
            BoxData[
             FormBox[
@@ -91,7 +93,7 @@ Cell[BoxData[
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`m], Number, FieldSize -> 2]},
+          Dynamic[$CellContext`m1$$], Number, FieldSize -> 2]},
         "RowDefault"]},
       {
        TemplateBox[{InterpretationBox[
@@ -158,7 +160,8 @@ Cell[BoxData[
       {
        ButtonBox["\<\"Play\"\>",
         Appearance->Automatic,
-        ButtonFunction:>$CellContext`play[$CellContext`k$$],
+        ButtonFunction:>(($CellContext`n = $CellContext`n1$$; $CellContext`m = \
+$CellContext`m1$$; Null); $CellContext`play[$CellContext`k$$]),
         Evaluator->Automatic,
         ImageSize->300,
         Method->"Queued"]},
@@ -195,7 +198,7 @@ $CellContext`p2]]]}], StandardForm],
           None, $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 
            0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}, $CellContext`m = 
           6, $CellContext`n = 4, $CellContext`gameon = 
-          False, $CellContext`x = {}, $CellContext`check[
+          True, $CellContext`x = {}, $CellContext`check[
             Pattern[$CellContext`p1, 
              Blank[]], 
             Pattern[$CellContext`p2, 
@@ -227,14 +230,16 @@ $CellContext`gameon = False]]];
              If[$CellContext`rest == {}, $CellContext`group = 
                 ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
                 False; $CellContext`message = "Success!"; 
-               Null]]], $CellContext`rest = {}, $CellContext`all = {}, \
-$CellContext`message = "Welcome - please adjust parameters and press play!"}]},
+               Null]]], $CellContext`rest = {{1, 1}, {1, 5}, {2, 4}, {2, 1}, {
+           3, 3}, {2, 2}}, $CellContext`all = {{1, 1}, {1, 5}, {2, 4}, {2, 
+           1}, {3, 3}, {2, 2}}, $CellContext`message = 
+          "I hope you remember them all!"}]},
       {"\<\"\"\>"},
       {
        DynamicBox[ToBoxes[
          $CellContext`style[
           StringJoin["  ", $CellContext`message]], StandardForm],
-        ImageSizeCache->{417., {4., 16.}}]},
+        ImageSizeCache->{251., {4., 16.}}]},
       {"\<\"\"\>"}
      },
      DefaultBaseStyle->"Column",
@@ -247,8 +252,8 @@ $CellContext`message = "Welcome - please adjust parameters and press play!"}]},
    FrameMargins->Medium,
    StripOnInput->False],
   DynamicModuleValues:>{},
-  Initialization:>{$CellContext`n = 4, $CellContext`m = 
-    6, $CellContext`time2pause = 2, $CellContext`play[
+  Initialization:>{$CellContext`time2pause = 2, $CellContext`n = 
+    4, $CellContext`m = 6, $CellContext`play[
       Pattern[$CellContext`k, 
        Blank[]]] := If[
       Or[
@@ -276,8 +281,8 @@ $CellContext`all = $CellContext`rest; Map[(Part[$CellContext`group,
         Pause[$CellContext`time2pause]; $CellContext`reset; \
 $CellContext`gameon = True; $CellContext`message = 
          "I hope you remember them all!"; Null]]], $CellContext`message = 
-    "Welcome - please adjust parameters and press play!", $CellContext`gameon = 
-    False, $CellContext`reset := ($CellContext`group = 
+    "I hope you remember them all!", $CellContext`gameon = 
+    True, $CellContext`reset := ($CellContext`group = 
       Table[0, {$CellContext`n}, {$CellContext`m}]; 
      Null), $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 
      0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}, $CellContext`randomchoose[
@@ -286,8 +291,10 @@ $CellContext`gameon = True; $CellContext`message =
       Flatten[
        Table[{$CellContext`i, $CellContext`j}, {$CellContext`i, \
 $CellContext`n}, {$CellContext`j, $CellContext`m}], 
-       1], $CellContext`k], $CellContext`rest = {}, $CellContext`all = {}, \
-$CellContext`pt = None, $CellContext`x = {}, $CellContext`check[
+       1], $CellContext`k], $CellContext`rest = {{1, 1}, {1, 5}, {2, 4}, {2, 
+     1}, {3, 3}, {2, 2}}, $CellContext`all = {{1, 1}, {1, 5}, {2, 4}, {2, 
+     1}, {3, 3}, {2, 2}}, $CellContext`pt = 
+    None, $CellContext`x = {}, $CellContext`check[
       Pattern[$CellContext`p1, 
        Blank[]], 
       Pattern[$CellContext`p2, 
@@ -353,11 +360,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1464, 33, 12120, 292, 520, "Output"]
+Cell[1464, 33, 12457, 299, 520, "Output"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature FxTOs8Pai2hSlCgwE@5ODvCW *)
+(* NotebookSignature 9xDLTvHa9PwpsC1c3ywE8buc *)

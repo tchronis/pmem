@@ -113,15 +113,15 @@ style[t_]:=If[(Head@t)===InputField,t,Text@Style[t,fontfamily,fontcolor,Bold,Lar
 
 
 (* ::Input:: *)
-DynamicModule[{k=6},
+DynamicModule[{k=6,n1=n,m1=m},
 Framed[
 Column[{"",
 Row[style/@{" ",
 "Size of board ",
 " rows  ",
-InputField[Dynamic[n],Number,FieldSize->2],
+InputField[Dynamic@n1,Number,FieldSize->2],
 " columns   ",
-InputField[Dynamic[m],Number,FieldSize->2]
+InputField[Dynamic@m1,Number,FieldSize->2]
 }],
 Row[style/@{" ",
 "Number of squares you have to find   ",
@@ -131,7 +131,8 @@ Row[style/@{" ",
 "Seconds to display the correct squares ",
 InputField[Dynamic[time2pause],Number,FieldSize->2]
 }],
-Button[style/@"Play",play[k],ImageSize->300,Method->"Queued"],
+Button[style/@"Play",
+(n=n1;m=m1;);play[k],ImageSize->300,Method->"Queued"],
 panel,
 "",
 Dynamic@style@("  "<>message),
@@ -139,5 +140,6 @@ Dynamic@style@("  "<>message),
 },Background->Darker@Brown]
 ,FrameMargins->Medium,Background->Black]
 ,SaveDefinitions->True]
+
 
 
