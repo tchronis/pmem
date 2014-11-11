@@ -3,7 +3,7 @@
 (*** Wolfram CDF File ***)
 (* http://www.wolfram.com/cdf *)
 
-(* CreatedBy='Mathematica 10.0' *)
+(* CreatedBy='Mathematica 9.0' *)
 
 (*************************************************************************)
 (*                                                                       *)
@@ -22,31 +22,50 @@
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[      1064,         20]
-NotebookDataLength[     17297,        435]
-NotebookOptionsPosition[     17625,        423]
-NotebookOutlinePosition[     18301,        450]
-CellTagsIndexPosition[     18258,        447]
+NotebookDataPosition[      1063,         20]
+NotebookDataLength[     33189,        786]
+NotebookOptionsPosition[     33500,        773]
+NotebookOutlinePosition[     34192,        801]
+CellTagsIndexPosition[     34149,        798]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
- DynamicModuleBox[{$CellContext`k$$ = 6, $CellContext`n1$$ = 
-  4, $CellContext`m1$$ = 6}, 
+ DynamicModuleBox[{$CellContext`k$$ = 7, $CellContext`n1$$ = 
+  4, $CellContext`m1$$ = 9}, 
   FrameBox[
    TagBox[GridBox[{
       {"\<\"\"\>"},
+      {
+       StyleBox["\<\" p m e m\\n\"\>",
+        StripOnInput->False,
+        LineColor->RGBColor[1, 0.5, 0],
+        FrontFaceColor->RGBColor[1, 0.5, 0],
+        BackFaceColor->RGBColor[1, 0.5, 0],
+        GraphicsColor->RGBColor[1, 0.5, 0],
+        FontSize->20,
+        FontWeight->Bold,
+        FontColor->RGBColor[1, 0.5, 0]]},
       {
        TemplateBox[{InterpretationBox[
           Cell[
            BoxData[
             FormBox[
-             StyleBox["\" \"", "Helvetica", 
+             StyleBox[
+             "\" \"", "Helvetica", StripOnInput -> False, LineColor -> 
               RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
           Text[
            Style[" ", "Helvetica", 
             RGBColor[
@@ -55,11 +74,437 @@ Cell[BoxData[
           Cell[
            BoxData[
             FormBox[
-             StyleBox["\"Stop on the first mistake  \"", "Helvetica", 
+             StyleBox[
+             "\"Size of board \"", "Helvetica", StripOnInput -> False, 
+              LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style["Size of board ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\" rows  \"", "Helvetica", StripOnInput -> False, LineColor -> 
               RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[" rows  ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
+          Dynamic[$CellContext`n1$$], Number, ContinuousAction -> False, 
+          FieldSize -> 1.2, ImageSize -> {20, 14.2}],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"+\"", Appearance -> "Palette", ButtonFunction :> 
+               Increment[$CellContext`n1$$], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["+", 
+             Increment[$CellContext`n1$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"-\"", Appearance -> "Palette", ButtonFunction :> 
+               Decrement[$CellContext`n1$$], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["-", 
+             Decrement[$CellContext`n1$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\" columns   \"", "Helvetica", StripOnInput -> False, LineColor -> 
+              RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[" columns   ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
+          Dynamic[$CellContext`m1$$], Number, ContinuousAction -> False, 
+          FieldSize -> 1.2, ImageSize -> {20, 14.2}],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"+\"", Appearance -> "Palette", ButtonFunction :> 
+               Increment[$CellContext`m1$$], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["+", 
+             Increment[$CellContext`m1$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"-\"", Appearance -> "Palette", ButtonFunction :> 
+               Decrement[$CellContext`m1$$], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["-", 
+             Decrement[$CellContext`m1$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]]},
+        "RowDefault"]},
+      {
+       TemplateBox[{InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\" \"", "Helvetica", StripOnInput -> False, LineColor -> 
+              RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[" ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\"Number of squares you have to find   \"", "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style["Number of squares you have to find   ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
+          Dynamic[$CellContext`k$$], Number, FieldSize -> 1.2, 
+          ImageSize -> {20, 14.2}],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"+\"", Appearance -> "Palette", ButtonFunction :> 
+               Increment[$CellContext`k$$], Evaluator -> Automatic, ImageSize -> 
+               Tiny, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
+              False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["+", 
+             Increment[$CellContext`k$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"-\"", Appearance -> "Palette", ButtonFunction :> 
+               Decrement[$CellContext`k$$], Evaluator -> Automatic, ImageSize -> 
+               Tiny, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
+              False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["-", 
+             Decrement[$CellContext`k$$], Appearance -> "Palette", ImageSize -> 
+             Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]]},
+        "RowDefault"]},
+      {
+       TemplateBox[{InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\" \"", "Helvetica", StripOnInput -> False, LineColor -> 
+              RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[" ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\"Seconds to display the correct squares \"", "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style["Seconds to display the correct squares ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
+          Dynamic[$CellContext`time2pause], Number, FieldSize -> 1.2, 
+          ImageSize -> {20, 14.2}],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"+\"", Appearance -> "Palette", ButtonFunction :> 
+               Increment[$CellContext`time2pause], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["+", 
+             Increment[$CellContext`time2pause], Appearance -> "Palette", 
+             ImageSize -> Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              ButtonBox[
+              "\"-\"", Appearance -> "Palette", ButtonFunction :> 
+               Decrement[$CellContext`time2pause], Evaluator -> Automatic, 
+               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+              StripOnInput -> False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Button["-", 
+             Decrement[$CellContext`time2pause], Appearance -> "Palette", 
+             ImageSize -> Tiny], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]]},
+        "RowDefault"]},
+      {
+       TemplateBox[{InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\" \"", "Helvetica", StripOnInput -> False, LineColor -> 
+              RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
+          Text[
+           Style[" ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+             "\"Stop on the first mistake  \"", "Helvetica", StripOnInput -> 
+              False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
           Text[
            Style["Stop on the first mistake  ", "Helvetica", 
             RGBColor[
@@ -73,12 +518,20 @@ Cell[BoxData[
                ToBoxes[
                 Checkbox[
                  Dynamic[$CellContext`stoponmistake], Enabled -> 
-                 If[$CellContext`gameon, False, True]], StandardForm]], 
-              "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
+                 If[$CellContext`gameon, False, True]], StandardForm], 
+               ImageSizeCache -> {17., {3., 15.}}], "Helvetica", StripOnInput -> 
+              False, LineColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FrontFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], BackFaceColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], GraphicsColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0], FontSize -> Larger, FontWeight -> Bold, 
+              FontColor -> RGBColor[
+                Rational[2, 3], 
+                Rational[2, 3], 0]], TextForm]], "InlineText"], 
           Text[
            Style[
             Dynamic[
@@ -89,181 +542,67 @@ Cell[BoxData[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]]},
         "RowDefault"]},
-      {"\<\"\"\>"},
-      {
-       TemplateBox[{InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\" \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style[" ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\"Size of board \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style["Size of board ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\" rows  \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style[" rows  ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`n1$$], Number, FieldSize -> 2],
-         InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\" columns   \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style[" columns   ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`m1$$], Number, FieldSize -> 2]},
-        "RowDefault"]},
-      {
-       TemplateBox[{InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\" \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style[" ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox[
-             "\"Number of squares you have to find   \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style["Number of squares you have to find   ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`k$$], Number, FieldSize -> 2]},
-        "RowDefault"]},
-      {
-       TemplateBox[{InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox["\" \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style[" ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
-          Cell[
-           BoxData[
-            FormBox[
-             StyleBox[
-             "\"Seconds to display the correct squares \"", "Helvetica", 
-              RGBColor[
-               Rational[2, 3], 
-               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
-             TextForm]], "InlineText"], 
-          Text[
-           Style["Seconds to display the correct squares ", "Helvetica", 
-            RGBColor[
-             Rational[2, 3], 
-             Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`time2pause], Number, FieldSize -> 2]},
-        "RowDefault"]},
       {
        ButtonBox["\<\"Play\"\>",
         Appearance->Automatic,
         ButtonFunction:>(($CellContext`n = $CellContext`n1$$; $CellContext`m = \
-$CellContext`m1$$; Null); $CellContext`play[$CellContext`k$$]),
+$CellContext`m1$$; Null); $CellContext`initiate[$CellContext`k$$]),
         Evaluator->Automatic,
         ImageSize->300,
         Method->"Queued"]},
       {
        DynamicModuleBox[{}, 
-        DynamicBox[
-         ToBoxes[$CellContext`pt = MousePosition["Graphics"]; EventHandler[
-            
-            ArrayPlot[$CellContext`group, Mesh -> True, MeshStyle -> Gray, 
-             Background -> LightBrown, 
-             ColorRules -> {
-              10 -> Red, 2 -> Darker[Green], -1 -> LightGray, 1 -> Black, 0 -> 
-               White}, ImageSize -> 50 {$CellContext`m, $CellContext`n}], {
-            "MouseClicked" :> Module[{$CellContext`p1, $CellContext`p2}, 
-               If[$CellContext`gameon, $CellContext`p1 = Floor[
-                   Part[$CellContext`pt, 2]]; $CellContext`p2 = Ceiling[
-                   
-                   Part[$CellContext`pt, 
+        DynamicBox[ToBoxes[
+          Refresh[$CellContext`pt = MousePosition["Graphics"]; EventHandler[
+             
+             ArrayPlot[$CellContext`group, Mesh -> True, MeshStyle -> Gray, 
+              Background -> LightBrown, 
+              ColorRules -> {
+               10 -> Red, 2 -> Darker[Green], -1 -> LightGray, 1 -> Black, 0 -> 
+                White}, ImageSize -> 50 {$CellContext`m, $CellContext`n}], {
+             "MouseClicked" :> Module[{$CellContext`p1, $CellContext`p2}, 
+                If[$CellContext`gameon, $CellContext`p1 = Floor[
+                    Part[$CellContext`pt, 2]]; $CellContext`p2 = Ceiling[
+                    
+                    Part[$CellContext`pt, 
                     1]]; $CellContext`x = {$CellContext`pt, $CellContext`n - \
 $CellContext`p1, $CellContext`p2}; If[
-                  And[
-                  1 <= $CellContext`n - $CellContext`p1 <= $CellContext`n, 
-                   1 <= $CellContext`p2 <= $CellContext`m], 
-                  Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
+                   And[
+                   1 <= $CellContext`n - $CellContext`p1 <= $CellContext`n, 
+                    1 <= $CellContext`p2 <= $CellContext`m], 
+                   Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
 $CellContext`p2] = ReplaceAll[
                     
                     Part[$CellContext`group, $CellContext`n - \
 $CellContext`p1, $CellContext`p2], {
                     0 -> 1}]]; $CellContext`check[$CellContext`p1, \
-$CellContext`p2]]]}], StandardForm],
-         ImageSizeCache->{390., {126., 134.}}],
+$CellContext`p2]]]}], UpdateInterval -> 0.5], StandardForm],
+         ImageSizeCache->{585., {126., 134.}}],
         DynamicModuleValues:>{},
-        Initialization:>{$CellContext`pt = {4.088648412882218, 
-           20.040462441142694`}, $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0,
-            0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 
-           0}}, $CellContext`m = 6, $CellContext`n = 4, $CellContext`gameon = 
+        Initialization:>{$CellContext`pt = 
+          None, $CellContext`group = {{2, 2, 2, 10, 10, 2, -1, 2, 10}, {2, -1,
+            2, 10, 2, -1, 2, -1, 2}, {2, 2, 2, 10, 2, -1, 2, -1, 2}, {2, 10, 
+           10, 10, 2, -1, -1, -1, 2}}, $CellContext`m = 9, $CellContext`n = 
+          4, $CellContext`gameon = 
           False, $CellContext`x = {}, $CellContext`check[
             Pattern[$CellContext`p1, 
              Blank[]], 
             Pattern[$CellContext`p2, 
-             Blank[]]] := 
-          Module[{}, Increment[$CellContext`move]; If[$CellContext`gameon, If[
-                And[
-                 Inequality[
-                 0, Less, $CellContext`n - $CellContext`p1, 
-                  LessEqual, $CellContext`n], 
-                 Inequality[
-                 0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
-                If[
+             Blank[]]] := Module[{$CellContext`newchoice}, 
+            If[$CellContext`gameon, If[
+               And[
+                Inequality[
+                0, Less, $CellContext`n - $CellContext`p1, 
+                 LessEqual, $CellContext`n], 
+                Inequality[
+                0, Less, $CellContext`p2, 
+                 LessEqual, $CellContext`m]], $CellContext`newchoice = If[
+                  Not[
+                   
+                   MemberQ[$CellContext`selectedmoves, {$CellContext`n - \
+$CellContext`p1, $CellContext`p2}]], Increment[$CellContext`move]; 
+                  AppendTo[$CellContext`selectedmoves, {$CellContext`n - \
+$CellContext`p1, $CellContext`p2}]; True, False]; If[
                  
                  MemberQ[$CellContext`rest, {$CellContext`n - \
 $CellContext`p1, $CellContext`p2}], $CellContext`rest = 
@@ -281,31 +620,31 @@ $CellContext`p2] = 10; Map[(Part[$CellContext`group,
                     Apply[
                     Sequence, #]] = -1)& , $CellContext`rest]; \
 $CellContext`gameon = False]]]]; 
-              If[$CellContext`rest == {}, $CellContext`group = 
-                 ReplaceAll[$CellContext`group, {
-                   1 -> 2}]; $CellContext`gameon = 
-                 False; $CellContext`message = "S U C C E S S\n"; Null, 
-                If[
-                 Not[$CellContext`stoponmistake], 
-                 
-                 If[$CellContext`move == $CellContext`nomoves, \
+             If[$CellContext`rest == {}, $CellContext`group = 
+                ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
+                False; $CellContext`message = "S U C C E S S\n"; Null, 
+               If[
+                Not[$CellContext`stoponmistake], 
+                
+                If[$CellContext`move == $CellContext`nomoves, \
 $CellContext`gameon = False; $CellContext`group = 
-                   ReplaceAll[$CellContext`group, {1 -> 10}]; 
-                  Map[(Part[$CellContext`group, 
+                  ReplaceAll[$CellContext`group, {1 -> 10}]; 
+                 Map[(Part[$CellContext`group, 
                     Apply[Sequence, #]] = 1)& , $CellContext`rest]; 
-                  Map[(Part[$CellContext`group, 
+                 Map[(Part[$CellContext`group, 
                     Apply[Sequence, #]] = 2)& , 
-                    
-                    Complement[$CellContext`all, $CellContext`rest]]; \
+                   
+                   Complement[$CellContext`all, $CellContext`rest]]; \
 $CellContext`message = StringJoin["You missed ", 
                     ToString[
                     Length[$CellContext`rest]], 
                     " squares\n(the black ones)!"]; 
-                  Null]]]]], $CellContext`move = 
-          0, $CellContext`rest = {}, $CellContext`stoponmistake = 
+                 Null]]]]], $CellContext`selectedmoves = {}, \
+$CellContext`move = 0, $CellContext`rest = {}, $CellContext`stoponmistake = 
           True, $CellContext`all = {}, $CellContext`message = 
           "Welcome!\n Please adjust parameters and press play!", \
-$CellContext`nomoves = 6}]},
+$CellContext`nomoves = 7},
+        SynchronousInitialization->False]},
       {"\<\"\"\>"},
       {
        DynamicBox[ToBoxes[
@@ -324,9 +663,9 @@ $CellContext`nomoves = 6}]},
    FrameMargins->Medium,
    StripOnInput->False],
   DynamicModuleValues:>{},
-  Initialization:>{$CellContext`stoponmistake = True, $CellContext`gameon = 
-    False, $CellContext`time2pause = 3, $CellContext`n = 4, $CellContext`m = 
-    6, $CellContext`play[
+  Initialization:>{$CellContext`time2pause = 3, $CellContext`stoponmistake = 
+    True, $CellContext`gameon = False, $CellContext`n = 4, $CellContext`m = 
+    9, $CellContext`initiate[
       Pattern[$CellContext`k, 
        Blank[]]] := If[
       Or[
@@ -356,29 +695,40 @@ $CellContext`nomoves = $CellContext`k; $CellContext`move =
          0; $CellContext`gameon = True; $CellContext`message = 
          "I hope you remember them all!\n"; Null]]], $CellContext`message = 
     "Welcome!\n Please adjust parameters and press play!", $CellContext`reset := \
-($CellContext`group = Table[0, {$CellContext`n}, {$CellContext`m}]; 
-     Null), $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 
-     0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}, $CellContext`randomchoose[
+($CellContext`group = 
+      Table[0, {$CellContext`n}, {$CellContext`m}]; \
+$CellContext`selectedmoves = {}; $CellContext`levelpoints = 0; 
+     Null), $CellContext`group = {{2, 2, 2, 10, 10, 2, -1, 2, 10}, {2, -1, 2, 
+     10, 2, -1, 2, -1, 2}, {2, 2, 2, 10, 2, -1, 2, -1, 2}, {2, 10, 10, 10, 
+     2, -1, -1, -1, 
+     2}}, $CellContext`selectedmoves = {}, $CellContext`levelpoints = 
+    0, $CellContext`randomchoose[
       Pattern[$CellContext`k, 
        Blank[]]] := RandomSample[
       Flatten[
        Table[{$CellContext`i, $CellContext`j}, {$CellContext`i, \
 $CellContext`n}, {$CellContext`j, $CellContext`m}], 
        1], $CellContext`k], $CellContext`rest = {}, $CellContext`all = {}, \
-$CellContext`nomoves = 6, $CellContext`move = 
-    0, $CellContext`pt = {4.088648412882218, 
-     20.040462441142694`}, $CellContext`x = {}, $CellContext`check[
+$CellContext`nomoves = 7, $CellContext`move = 0, $CellContext`pt = 
+    None, $CellContext`x = {}, $CellContext`check[
       Pattern[$CellContext`p1, 
        Blank[]], 
       Pattern[$CellContext`p2, 
-       Blank[]]] := 
-    Module[{}, Increment[$CellContext`move]; If[$CellContext`gameon, If[
-          And[
-           Inequality[
-           0, Less, $CellContext`n - $CellContext`p1, 
-            LessEqual, $CellContext`n], 
-           Inequality[0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
-          If[
+       Blank[]]] := Module[{$CellContext`newchoice}, 
+      If[$CellContext`gameon, If[
+         And[
+          Inequality[
+          0, Less, $CellContext`n - $CellContext`p1, 
+           LessEqual, $CellContext`n], 
+          Inequality[
+          0, Less, $CellContext`p2, 
+           LessEqual, $CellContext`m]], $CellContext`newchoice = If[
+            Not[
+             
+             MemberQ[$CellContext`selectedmoves, {$CellContext`n - \
+$CellContext`p1, $CellContext`p2}]], Increment[$CellContext`move]; 
+            AppendTo[$CellContext`selectedmoves, {$CellContext`n - \
+$CellContext`p1, $CellContext`p2}]; True, False]; If[
            
            MemberQ[$CellContext`rest, {$CellContext`n - $CellContext`p1, \
 $CellContext`p2}], $CellContext`rest = 
@@ -395,25 +745,25 @@ $CellContext`p2] = 10; Map[(Part[$CellContext`group,
                  Apply[
                  Sequence, #]] = -1)& , $CellContext`rest]; \
 $CellContext`gameon = False]]]]; 
-        If[$CellContext`rest == {}, $CellContext`group = 
-           ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
-           False; $CellContext`message = "S U C C E S S\n"; Null, 
-          If[
-           Not[$CellContext`stoponmistake], 
-           
-           If[$CellContext`move == $CellContext`nomoves, $CellContext`gameon = 
-             False; $CellContext`group = 
-             ReplaceAll[$CellContext`group, {1 -> 10}]; 
-            Map[(Part[$CellContext`group, 
-                Apply[Sequence, #]] = 1)& , $CellContext`rest]; 
-            Map[(Part[$CellContext`group, 
-                Apply[Sequence, #]] = 2)& , 
-              
-              Complement[$CellContext`all, $CellContext`rest]]; \
+       If[$CellContext`rest == {}, $CellContext`group = 
+          ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
+          False; $CellContext`message = "S U C C E S S\n"; Null, 
+         If[
+          Not[$CellContext`stoponmistake], 
+          
+          If[$CellContext`move == $CellContext`nomoves, $CellContext`gameon = 
+            False; $CellContext`group = 
+            ReplaceAll[$CellContext`group, {1 -> 10}]; 
+           Map[(Part[$CellContext`group, 
+               Apply[Sequence, #]] = 1)& , $CellContext`rest]; 
+           Map[(Part[$CellContext`group, 
+               Apply[Sequence, #]] = 2)& , 
+             
+             Complement[$CellContext`all, $CellContext`rest]]; \
 $CellContext`message = StringJoin["You missed ", 
-               ToString[
-                Length[$CellContext`rest]], " squares\n(the black ones)!"]; 
-            Null]]]]], $CellContext`style[
+              ToString[
+               Length[$CellContext`rest]], " squares\n(the black ones)!"]; 
+           Null]]]]], $CellContext`style[
       Pattern[$CellContext`t, 
        Blank[]]] := If[Head[$CellContext`t] === InputField, $CellContext`t, 
       Text[
@@ -430,12 +780,13 @@ PrintingPageRange->{32000, 32000},
 PrintingOptions->{"Magnification"->1.,
 "PaperOrientation"->"Portrait",
 "PaperSize"->{612, 792}},
-ShowCellBracket->Automatic,
+ShowCellBracket->False,
 ShowSelection->True,
+Deployed->True,
 CellContext->Notebook,
 TrackCellChangeTimes->False,
 Magnification->1.3000000715255737`,
-FrontEndVersion->"10.0 for Microsoft Windows (32-bit) (July 1, 2014)",
+FrontEndVersion->"9.0 for Microsoft Windows (32-bit) (November 20, 2012)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -449,11 +800,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1464, 33, 16157, 388, 596, "Output"]
+Cell[1463, 33, 32033, 738, 640, "Output"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature ruDhU9Hc23ipSD142#r3eZaa *)
+(* NotebookSignature 9w0aU7CoUT7UfDwDYu8CzQkM *)
