@@ -23,10 +23,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1063,         20]
-NotebookDataLength[     33189,        786]
-NotebookOptionsPosition[     33500,        773]
-NotebookOutlinePosition[     34192,        801]
-CellTagsIndexPosition[     34149,        798]
+NotebookDataLength[     33134,        788]
+NotebookOptionsPosition[     33445,        775]
+NotebookOutlinePosition[     34137,        803]
+CellTagsIndexPosition[     34094,        800]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -116,7 +116,7 @@ Cell[BoxData[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
           Dynamic[$CellContext`n1$$], Number, ContinuousAction -> False, 
-          FieldSize -> 1.2, ImageSize -> {20, 14.2}],InterpretationBox[
+          FieldSize -> 1.2],InterpretationBox[
           Cell[
            BoxData[
             FormBox[
@@ -124,7 +124,7 @@ Cell[BoxData[
               ButtonBox[
               "\"+\"", Appearance -> "Palette", ButtonFunction :> 
                Increment[$CellContext`n1$$], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -141,7 +141,7 @@ Cell[BoxData[
            Style[
             Button["+", 
              Increment[$CellContext`n1$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
@@ -152,7 +152,7 @@ Cell[BoxData[
               ButtonBox[
               "\"-\"", Appearance -> "Palette", ButtonFunction :> 
                Decrement[$CellContext`n1$$], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -169,7 +169,7 @@ Cell[BoxData[
            Style[
             Button["-", 
              Decrement[$CellContext`n1$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
@@ -196,7 +196,7 @@ Cell[BoxData[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
           Dynamic[$CellContext`m1$$], Number, ContinuousAction -> False, 
-          FieldSize -> 1.2, ImageSize -> {20, 14.2}],InterpretationBox[
+          FieldSize -> 1.2],InterpretationBox[
           Cell[
            BoxData[
             FormBox[
@@ -204,7 +204,7 @@ Cell[BoxData[
               ButtonBox[
               "\"+\"", Appearance -> "Palette", ButtonFunction :> 
                Increment[$CellContext`m1$$], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -221,7 +221,7 @@ Cell[BoxData[
            Style[
             Button["+", 
              Increment[$CellContext`m1$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
@@ -232,7 +232,7 @@ Cell[BoxData[
               ButtonBox[
               "\"-\"", Appearance -> "Palette", ButtonFunction :> 
                Decrement[$CellContext`m1$$], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -249,7 +249,7 @@ Cell[BoxData[
            Style[
             Button["-", 
              Decrement[$CellContext`m1$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]]},
@@ -300,8 +300,8 @@ Cell[BoxData[
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`k$$], Number, FieldSize -> 1.2, 
-          ImageSize -> {20, 14.2}],InterpretationBox[
+          Dynamic[$CellContext`k$$], Number, FieldSize -> 1.2],
+         InterpretationBox[
           Cell[
            BoxData[
             FormBox[
@@ -309,7 +309,7 @@ Cell[BoxData[
               ButtonBox[
               "\"+\"", Appearance -> "Palette", ButtonFunction :> 
                Increment[$CellContext`k$$], Evaluator -> Automatic, ImageSize -> 
-               Tiny, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
+               Small, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
               False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -326,7 +326,7 @@ Cell[BoxData[
            Style[
             Button["+", 
              Increment[$CellContext`k$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
@@ -337,7 +337,7 @@ Cell[BoxData[
               ButtonBox[
               "\"-\"", Appearance -> "Palette", ButtonFunction :> 
                Decrement[$CellContext`k$$], Evaluator -> Automatic, ImageSize -> 
-               Tiny, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
+               Small, Method -> "Preemptive"], "Helvetica", StripOnInput -> 
               False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -354,7 +354,7 @@ Cell[BoxData[
            Style[
             Button["-", 
              Decrement[$CellContext`k$$], Appearance -> "Palette", ImageSize -> 
-             Tiny], "Helvetica", 
+             Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]]},
@@ -405,8 +405,8 @@ Cell[BoxData[
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InputFieldBox[
-          Dynamic[$CellContext`time2pause], Number, FieldSize -> 1.2, 
-          ImageSize -> {20, 14.2}],InterpretationBox[
+          Dynamic[$CellContext`time2pause], Number, FieldSize -> 1.2],
+         InterpretationBox[
           Cell[
            BoxData[
             FormBox[
@@ -414,7 +414,7 @@ Cell[BoxData[
               ButtonBox[
               "\"+\"", Appearance -> "Palette", ButtonFunction :> 
                Increment[$CellContext`time2pause], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -431,7 +431,7 @@ Cell[BoxData[
            Style[
             Button["+", 
              Increment[$CellContext`time2pause], Appearance -> "Palette", 
-             ImageSize -> Tiny], "Helvetica", 
+             ImageSize -> Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
@@ -442,7 +442,7 @@ Cell[BoxData[
               ButtonBox[
               "\"-\"", Appearance -> "Palette", ButtonFunction :> 
                Decrement[$CellContext`time2pause], Evaluator -> Automatic, 
-               ImageSize -> Tiny, Method -> "Preemptive"], "Helvetica", 
+               ImageSize -> Small, Method -> "Preemptive"], "Helvetica", 
               StripOnInput -> False, LineColor -> RGBColor[
                 Rational[2, 3], 
                 Rational[2, 3], 0], FrontFaceColor -> RGBColor[
@@ -459,7 +459,7 @@ Cell[BoxData[
            Style[
             Button["-", 
              Decrement[$CellContext`time2pause], Appearance -> "Palette", 
-             ImageSize -> Tiny], "Helvetica", 
+             ImageSize -> Small], "Helvetica", 
             RGBColor[
              Rational[2, 3], 
              Rational[2, 3], 0], Bold, Larger]]]},
@@ -639,6 +639,7 @@ $CellContext`message = StringJoin["You missed ",
                     ToString[
                     Length[$CellContext`rest]], 
                     " squares\n(the black ones)!"]; 
+                 
                  Null]]]]], $CellContext`selectedmoves = {}, \
 $CellContext`move = 0, $CellContext`rest = {}, $CellContext`stoponmistake = 
           True, $CellContext`all = {}, $CellContext`message = 
@@ -727,6 +728,7 @@ $CellContext`nomoves = 7, $CellContext`move = 0, $CellContext`pt =
              
              MemberQ[$CellContext`selectedmoves, {$CellContext`n - \
 $CellContext`p1, $CellContext`p2}]], Increment[$CellContext`move]; 
+            
             AppendTo[$CellContext`selectedmoves, {$CellContext`n - \
 $CellContext`p1, $CellContext`p2}]; True, False]; If[
            
@@ -800,11 +802,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1463, 33, 32033, 738, 640, "Output"]
+Cell[1463, 33, 31978, 740, 654, "Output"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature 9w0aU7CoUT7UfDwDYu8CzQkM *)
+(* NotebookSignature JwDGAyl7oli@hCgibv9mZUl9 *)

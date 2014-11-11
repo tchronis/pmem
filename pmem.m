@@ -160,22 +160,22 @@ Style[" p m e m\n",FontSize->20,Orange,Bold],
 Row[style/@{" ",
 "Size of board ",
 " rows  ",
-InputField[Dynamic@n1,Number,FieldSize->1.2,ContinuousAction->False,ImageSize->{20,14.2}],
-Button["+",n1++,Appearance->"Palette",ImageSize->Tiny],Button["-",n1--,Appearance->"Palette",ImageSize->Tiny],
+InputField[Dynamic@n1,Number,FieldSize->1.2,ContinuousAction->False],
+Button["+",n1++,Appearance->"Palette",ImageSize->Small],Button["-",n1--,Appearance->"Palette",ImageSize->Small],
 " columns   ",
-InputField[Dynamic@m1,Number,FieldSize->1.2,ContinuousAction->False,ImageSize->{20,14.2}],
-Button["+",m1++,Appearance->"Palette",ImageSize->Tiny],Button["-",m1--,Appearance->"Palette",ImageSize->Tiny]
+InputField[Dynamic@m1,Number,FieldSize->1.2,ContinuousAction->False],
+Button["+",m1++,Appearance->"Palette",ImageSize->Small],Button["-",m1--,Appearance->"Palette",ImageSize->Small]
 }],
 Row[style/@{" ",
 "Number of squares you have to find   ",
-InputField[Dynamic[k],Number,FieldSize->1.2,ImageSize->{20,14.2}],
-Button["+",k++,Appearance->"Palette",ImageSize->Tiny],Button["-",k--,Appearance->"Palette",ImageSize->Tiny]
+InputField[Dynamic[k],Number,FieldSize->1.2],
+Button["+",k++,Appearance->"Palette",ImageSize->Small],Button["-",k--,Appearance->"Palette",ImageSize->Small]
 }],
 Row[style/@{" ",
 "Seconds to display the correct squares ",
-InputField[Dynamic[time2pause],Number,FieldSize->1.2,ImageSize->{20,14.2}],
-Button["+",time2pause++,Appearance->"Palette",ImageSize->Tiny],
-Button["-",time2pause--,Appearance->"Palette",ImageSize->Tiny]
+InputField[Dynamic[time2pause],Number,FieldSize->1.2],
+Button["+",time2pause++,Appearance->"Palette",ImageSize->Small],
+Button["-",time2pause--,Appearance->"Palette",ImageSize->Small]
 }],
 Row[style/@{" ","Stop on the first mistake  ",Dynamic@Checkbox[Dynamic@stoponmistake,Enabled->If[gameon,False,True]]}],
 Button[style/@"Play",

@@ -15,6 +15,6 @@ The ultimate goal will be to have the option to create your own memory game usin
   
   -Several colors to remember
 
-![alt tag](https://github.com/tchronis/pmem/blob/master/screenshot.png)
+![alt tag](https://github.com/tchronis/pmem/blob/master/screenshot3.png)
 
 http://www.mathlogic.eu
