@@ -23,19 +23,72 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[     13597,        346]
-NotebookOptionsPosition[     13925,        334]
-NotebookOutlinePosition[     14601,        361]
-CellTagsIndexPosition[     14558,        358]
+NotebookDataLength[     17297,        435]
+NotebookOptionsPosition[     17625,        423]
+NotebookOutlinePosition[     18301,        450]
+CellTagsIndexPosition[     18258,        447]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`k$$ = 6, $CellContext`n1$$ = 
-  6, $CellContext`m1$$ = 6}, 
+  4, $CellContext`m1$$ = 6}, 
   FrameBox[
    TagBox[GridBox[{
+      {"\<\"\"\>"},
+      {
+       TemplateBox[{InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox["\" \"", "Helvetica", 
+              RGBColor[
+               Rational[2, 3], 
+               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
+             TextForm]], "InlineText"], 
+          Text[
+           Style[" ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox["\"Stop on the first mistake  \"", "Helvetica", 
+              RGBColor[
+               Rational[2, 3], 
+               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
+             TextForm]], "InlineText"], 
+          Text[
+           Style["Stop on the first mistake  ", "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]],InterpretationBox[
+          Cell[
+           BoxData[
+            FormBox[
+             StyleBox[
+              DynamicBox[
+               ToBoxes[
+                Checkbox[
+                 Dynamic[$CellContext`stoponmistake], Enabled -> 
+                 If[$CellContext`gameon, False, True]], StandardForm]], 
+              "Helvetica", 
+              RGBColor[
+               Rational[2, 3], 
+               Rational[2, 3], 0], Bold, Larger, StripOnInput -> False], 
+             TextForm]], "InlineText"], 
+          Text[
+           Style[
+            Dynamic[
+             Checkbox[
+              Dynamic[$CellContext`stoponmistake], Enabled -> 
+              If[$CellContext`gameon, False, True]]], "Helvetica", 
+            RGBColor[
+             Rational[2, 3], 
+             Rational[2, 3], 0], Bold, Larger]]]},
+        "RowDefault"]},
       {"\<\"\"\>"},
       {
        TemplateBox[{InterpretationBox[
@@ -194,56 +247,75 @@ $CellContext`p1, $CellContext`p2], {
 $CellContext`p2]]]}], StandardForm],
          ImageSizeCache->{390., {126., 134.}}],
         DynamicModuleValues:>{},
-        Initialization:>{$CellContext`pt = 
-          None, $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 
-           0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}, $CellContext`m = 
-          6, $CellContext`n = 4, $CellContext`gameon = 
-          True, $CellContext`x = {}, $CellContext`check[
+        Initialization:>{$CellContext`pt = {4.088648412882218, 
+           20.040462441142694`}, $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0,
+            0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 
+           0}}, $CellContext`m = 6, $CellContext`n = 4, $CellContext`gameon = 
+          False, $CellContext`x = {}, $CellContext`check[
             Pattern[$CellContext`p1, 
              Blank[]], 
             Pattern[$CellContext`p2, 
-             Blank[]]] := Module[{}, 
-            If[$CellContext`gameon, If[
-               And[
-                Inequality[
-                0, Less, $CellContext`n - $CellContext`p1, 
-                 LessEqual, $CellContext`n], 
-                Inequality[
-                0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
-               If[
-                
-                MemberQ[$CellContext`rest, {$CellContext`n - $CellContext`p1, \
-$CellContext`p2}], $CellContext`rest = 
-                Complement[$CellContext`rest, {{$CellContext`n - \
-$CellContext`p1, $CellContext`p2}}], 
+             Blank[]]] := 
+          Module[{}, Increment[$CellContext`move]; If[$CellContext`gameon, If[
+                And[
+                 Inequality[
+                 0, Less, $CellContext`n - $CellContext`p1, 
+                  LessEqual, $CellContext`n], 
+                 Inequality[
+                 0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
                 If[
-                 Not[
-                  
-                  MemberQ[$CellContext`all, {$CellContext`n - \
+                 
+                 MemberQ[$CellContext`rest, {$CellContext`n - \
+$CellContext`p1, $CellContext`p2}], $CellContext`rest = 
+                 Complement[$CellContext`rest, {{$CellContext`n - \
+$CellContext`p1, $CellContext`p2}}], 
+                 If[$CellContext`stoponmistake, 
+                  If[
+                   Not[
+                    
+                    MemberQ[$CellContext`all, {$CellContext`n - \
 $CellContext`p1, $CellContext`p2}]], $CellContext`message = 
-                  "Missed one! - end of game"; 
-                 Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
+                    "Missed one! - end of game\n"; 
+                   Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
 $CellContext`p2] = 10; Map[(Part[$CellContext`group, 
                     Apply[
                     Sequence, #]] = -1)& , $CellContext`rest]; \
-$CellContext`gameon = False]]]; 
-             If[$CellContext`rest == {}, $CellContext`group = 
-                ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
-                False; $CellContext`message = "Success!"; 
-               Null]]], $CellContext`rest = {{1, 1}, {1, 5}, {2, 4}, {2, 1}, {
-           3, 3}, {2, 2}}, $CellContext`all = {{1, 1}, {1, 5}, {2, 4}, {2, 
-           1}, {3, 3}, {2, 2}}, $CellContext`message = 
-          "I hope you remember them all!"}]},
+$CellContext`gameon = False]]]]; 
+              If[$CellContext`rest == {}, $CellContext`group = 
+                 ReplaceAll[$CellContext`group, {
+                   1 -> 2}]; $CellContext`gameon = 
+                 False; $CellContext`message = "S U C C E S S\n"; Null, 
+                If[
+                 Not[$CellContext`stoponmistake], 
+                 
+                 If[$CellContext`move == $CellContext`nomoves, \
+$CellContext`gameon = False; $CellContext`group = 
+                   ReplaceAll[$CellContext`group, {1 -> 10}]; 
+                  Map[(Part[$CellContext`group, 
+                    Apply[Sequence, #]] = 1)& , $CellContext`rest]; 
+                  Map[(Part[$CellContext`group, 
+                    Apply[Sequence, #]] = 2)& , 
+                    
+                    Complement[$CellContext`all, $CellContext`rest]]; \
+$CellContext`message = StringJoin["You missed ", 
+                    ToString[
+                    Length[$CellContext`rest]], 
+                    " squares\n(the black ones)!"]; 
+                  Null]]]]], $CellContext`move = 
+          0, $CellContext`rest = {}, $CellContext`stoponmistake = 
+          True, $CellContext`all = {}, $CellContext`message = 
+          "Welcome!\n Please adjust parameters and press play!", \
+$CellContext`nomoves = 6}]},
       {"\<\"\"\>"},
       {
        DynamicBox[ToBoxes[
          $CellContext`style[
-          StringJoin["  ", $CellContext`message]], StandardForm],
-        ImageSizeCache->{251., {4., 16.}}]},
+          StringJoin[" ", $CellContext`message]], StandardForm],
+        ImageSizeCache->{319., {30., 16.}}]},
       {"\<\"\"\>"}
      },
      DefaultBaseStyle->"Column",
-     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxAlignment->{"Columns" -> {{Center}}},
      GridBoxBackground->{"Columns" -> {{
           RGBColor[0.4, 0.2666666666666667, 0.13333333333333336`]}}},
      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
@@ -252,8 +324,9 @@ $CellContext`gameon = False]]];
    FrameMargins->Medium,
    StripOnInput->False],
   DynamicModuleValues:>{},
-  Initialization:>{$CellContext`time2pause = 2, $CellContext`n = 
-    4, $CellContext`m = 6, $CellContext`play[
+  Initialization:>{$CellContext`stoponmistake = True, $CellContext`gameon = 
+    False, $CellContext`time2pause = 3, $CellContext`n = 4, $CellContext`m = 
+    6, $CellContext`play[
       Pattern[$CellContext`k, 
        Blank[]]] := If[
       Or[
@@ -267,23 +340,23 @@ $CellContext`n, $CellContext`k < 1], $CellContext`message =
          IntegerQ[$CellContext`n]], 
         Not[
          IntegerQ[$CellContext`m]], $CellContext`m < 1, $CellContext`m > 
-        12, $CellContext`n < 1, $CellContext`n > 12], $CellContext`n = 
+        15, $CellContext`n < 1, $CellContext`n > 10], $CellContext`n = 
         4; $CellContext`m = 7; $CellContext`message = 
         "INAPPROPRIATE BOARD SIZE.\n ROWS AND COLUMNS MUST BE\n POSITIVE \
 INTEGERS SMALLER THAN 20\n PLEASE CORRECT", 
        Module[{$CellContext`r}, $CellContext`message = 
-         "The game begins. Try to memorize all dark squares"; \
+         "The game begins.\n Try to memorize all dark squares"; \
 $CellContext`gameon = 
          False; $CellContext`reset; $CellContext`r = \
 $CellContext`randomchoose[$CellContext`k]; $CellContext`rest = $CellContext`r; \
 $CellContext`all = $CellContext`rest; Map[(Part[$CellContext`group, 
             Apply[Sequence, #]] = 1)& , $CellContext`r]; 
         Pause[$CellContext`time2pause]; $CellContext`reset; \
-$CellContext`gameon = True; $CellContext`message = 
-         "I hope you remember them all!"; Null]]], $CellContext`message = 
-    "I hope you remember them all!", $CellContext`gameon = 
-    True, $CellContext`reset := ($CellContext`group = 
-      Table[0, {$CellContext`n}, {$CellContext`m}]; 
+$CellContext`nomoves = $CellContext`k; $CellContext`move = 
+         0; $CellContext`gameon = True; $CellContext`message = 
+         "I hope you remember them all!\n"; Null]]], $CellContext`message = 
+    "Welcome!\n Please adjust parameters and press play!", $CellContext`reset := \
+($CellContext`group = Table[0, {$CellContext`n}, {$CellContext`m}]; 
      Null), $CellContext`group = {{0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}, {0, 
      0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0}}, $CellContext`randomchoose[
       Pattern[$CellContext`k, 
@@ -291,40 +364,56 @@ $CellContext`gameon = True; $CellContext`message =
       Flatten[
        Table[{$CellContext`i, $CellContext`j}, {$CellContext`i, \
 $CellContext`n}, {$CellContext`j, $CellContext`m}], 
-       1], $CellContext`k], $CellContext`rest = {{1, 1}, {1, 5}, {2, 4}, {2, 
-     1}, {3, 3}, {2, 2}}, $CellContext`all = {{1, 1}, {1, 5}, {2, 4}, {2, 
-     1}, {3, 3}, {2, 2}}, $CellContext`pt = 
-    None, $CellContext`x = {}, $CellContext`check[
+       1], $CellContext`k], $CellContext`rest = {}, $CellContext`all = {}, \
+$CellContext`nomoves = 6, $CellContext`move = 
+    0, $CellContext`pt = {4.088648412882218, 
+     20.040462441142694`}, $CellContext`x = {}, $CellContext`check[
       Pattern[$CellContext`p1, 
        Blank[]], 
       Pattern[$CellContext`p2, 
-       Blank[]]] := Module[{}, 
-      If[$CellContext`gameon, If[
-         And[
-          Inequality[
-          0, Less, $CellContext`n - $CellContext`p1, 
-           LessEqual, $CellContext`n], 
-          Inequality[0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
-         If[
-          
-          MemberQ[$CellContext`rest, {$CellContext`n - $CellContext`p1, \
-$CellContext`p2}], $CellContext`rest = 
-          Complement[$CellContext`rest, {{$CellContext`n - $CellContext`p1, \
-$CellContext`p2}}], 
+       Blank[]]] := 
+    Module[{}, Increment[$CellContext`move]; If[$CellContext`gameon, If[
+          And[
+           Inequality[
+           0, Less, $CellContext`n - $CellContext`p1, 
+            LessEqual, $CellContext`n], 
+           Inequality[0, Less, $CellContext`p2, LessEqual, $CellContext`m]], 
           If[
-           Not[
-            
-            MemberQ[$CellContext`all, {$CellContext`n - $CellContext`p1, \
-$CellContext`p2}]], $CellContext`message = "Missed one! - end of game"; 
-           Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
+           
+           MemberQ[$CellContext`rest, {$CellContext`n - $CellContext`p1, \
+$CellContext`p2}], $CellContext`rest = 
+           Complement[$CellContext`rest, {{$CellContext`n - $CellContext`p1, \
+$CellContext`p2}}], 
+           If[$CellContext`stoponmistake, 
+            If[
+             Not[
+              
+              MemberQ[$CellContext`all, {$CellContext`n - $CellContext`p1, \
+$CellContext`p2}]], $CellContext`message = "Missed one! - end of game\n"; 
+             Part[$CellContext`group, $CellContext`n - $CellContext`p1, \
 $CellContext`p2] = 10; Map[(Part[$CellContext`group, 
-               Apply[
-               Sequence, #]] = -1)& , $CellContext`rest]; $CellContext`gameon = 
-            False]]]; 
-       If[$CellContext`rest == {}, $CellContext`group = 
-          ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
-          False; $CellContext`message = "Success!"; 
-         Null]]], $CellContext`style[
+                 Apply[
+                 Sequence, #]] = -1)& , $CellContext`rest]; \
+$CellContext`gameon = False]]]]; 
+        If[$CellContext`rest == {}, $CellContext`group = 
+           ReplaceAll[$CellContext`group, {1 -> 2}]; $CellContext`gameon = 
+           False; $CellContext`message = "S U C C E S S\n"; Null, 
+          If[
+           Not[$CellContext`stoponmistake], 
+           
+           If[$CellContext`move == $CellContext`nomoves, $CellContext`gameon = 
+             False; $CellContext`group = 
+             ReplaceAll[$CellContext`group, {1 -> 10}]; 
+            Map[(Part[$CellContext`group, 
+                Apply[Sequence, #]] = 1)& , $CellContext`rest]; 
+            Map[(Part[$CellContext`group, 
+                Apply[Sequence, #]] = 2)& , 
+              
+              Complement[$CellContext`all, $CellContext`rest]]; \
+$CellContext`message = StringJoin["You missed ", 
+               ToString[
+                Length[$CellContext`rest]], " squares\n(the black ones)!"]; 
+            Null]]]]], $CellContext`style[
       Pattern[$CellContext`t, 
        Blank[]]] := If[Head[$CellContext`t] === InputField, $CellContext`t, 
       Text[
@@ -360,11 +449,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[1464, 33, 12457, 299, 520, "Output"]
+Cell[1464, 33, 16157, 388, 596, "Output"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature 9xDLTvHa9PwpsC1c3ywE8buc *)
+(* NotebookSignature ruDhU9Hc23ipSD142#r3eZaa *)

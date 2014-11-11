@@ -21,14 +21,16 @@
 
 (* ::Input:: *)
 (*Global Variables*)
-ClearAll[n,m,group,x,gameon,time2pause,message,rest,x,all];
+ClearAll[n,m,group,x,gameon,time2pause,message,rest,x,all,nomoves,move];
 n=4;
 m=6;
 group=Table[0,{n},{m}];
 gameon=False;
-time2pause=2;
+time2pause=3;
 message="Welcome!\n Please adjust parameters and press play!";
 rest=all={};
+nomoves=6;move=0;
+stoponmistake=True;
 
 
 (* ::Input:: *)
@@ -38,22 +40,35 @@ reset:=(group=Table[0,{n},{m}];)
 
 (* ::Input:: *)
 ClearAll[check];
-check[p1_,p2_]:=Module[{},
+check[p1_,p2_]:=Module[{},move++;
 If[gameon,
 If[0<n-p1<=n && 0<p2<=m,
 If[
 MemberQ[rest,{n-p1,p2}],rest=Complement[rest,{{n-p1,p2}}]
 ,
+If[stoponmistake,
 If[
 !MemberQ[all,{n-p1,p2}](*Do not throw error on double click the same square*),
 message="Missed one! - end of game\n";
 group[[n-p1,p2]]=10;
 (group[[Sequence@@#]]=-1)&/@rest;gameon=False
-]]];
+]
+]
+]];
 If[rest=={},
 group=group/.{1->2};
 gameon=False;
-message="Success!\n";
+message="S U C C E S S\n";
+,
+If[!stoponmistake,
+If[move==nomoves,
+gameon=False;
+group=group/.{1->10};
+(group[[Sequence@@#]]=1)&/@rest;
+(group[[Sequence@@#]]=2)&/@Complement[all,rest];
+message="You missed "<>ToString@Length@rest<>" squares\n(the black ones)!";
+]
+]
 ]
 ]]
 
@@ -78,6 +93,8 @@ r=randomchoose[k];rest=r;all=rest;
 (group[[Sequence@@#]]=1)&/@r;
 Pause[time2pause];
 reset;
+nomoves=k;
+move=0;
 gameon=True;
 message="I hope you remember them all!\n";
 ]]]
@@ -116,6 +133,8 @@ style[t_]:=If[(Head@t)===InputField,t,Text@Style[t,fontfamily,fontcolor,Bold,Lar
 DynamicModule[{k=6,n1=n,m1=m},
 Framed[
 Column[{"",
+Row[style/@{" ","Stop on the first mistake  ",Dynamic@Checkbox[Dynamic@stoponmistake,Enabled->If[gameon,False,True]]}],
+"",
 Row[style/@{" ",
 "Size of board ",
 " rows  ",
@@ -137,7 +156,7 @@ panel,
 "",
 Dynamic@style@(" "<>message),
 ""
-},Background->Darker@Brown]
+},Background->Darker@Brown,Alignment->Center]
 ,FrameMargins->Medium,Background->Black]
 ,SaveDefinitions->True]
 
