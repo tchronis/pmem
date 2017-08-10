@@ -17,9 +17,8 @@ The ultimate goal will be to have the option to create your own memory game usin
 
 ![alt tag](https://github.com/tchronis/pmem/blob/master/screenshot3.png)
 
-http://www.mathlogic.eu
 
-Install
+## Install 
 
 Downland the pmem.m and import package or run:
 
